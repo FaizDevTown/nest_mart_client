@@ -4,6 +4,8 @@ import Layout from "./components/Layout/Layout"
 import HomePage from "./pages/HomePage"
 import Register from "./pages/Auth/Register"
 import Login from './pages/Auth/Login';
+import ForgotPassword from "./pages/Auth/ForgotPAssword";
+
 
 const AppRoutes = () => {
   return (
@@ -13,6 +15,7 @@ const AppRoutes = () => {
                 <Route index path="/" element={<HomePage/>} />
                 <Route  path="/register" element={<Register/>} />
                 <Route  path="/login" element={<Login/>} />
+                <Route  path="/forgot" element={<ForgotPassword/>} />
 
 
 

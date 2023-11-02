@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import img1 from "../../assets/imgs/theme/icons/icon-1.svg"
 import img2 from "../../assets/imgs/theme/icons/icon-2.svg"
 import img3 from "../../assets/imgs/theme/icons/icon-3.svg"
@@ -104,7 +105,7 @@ const Footer = () => {
         <div className="col">
           <div className="widget-about font-md mb-md-3 mb-lg-3 mb-xl-0 wow animate__animated animate__fadeInUp" data-wow-delay={0}>
             <div className="logo mb-30">
-              <a href="index.html" className="mb-15"><img src={icon1} alt="logo" /></a>
+              <Link to="index.html" className="mb-15"><img src={icon1} alt="logo" /></Link>
               <p className="font-lg text-heading">Awesome grocery store website template</p>
             </div>
             <ul className="contact-infor">
@@ -118,49 +119,49 @@ const Footer = () => {
         <div className="footer-link-widget col wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
           <h4 className="widget-title">Company</h4>
           <ul className="footer-list mb-sm-5 mb-md-0">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Delivery Information</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms &amp; Conditions</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Support Center</a></li>
-            <li><a href="#">Careers</a></li>
+            <li><Link to="#">About Us</Link></li>
+            <li><Link to="#">Delivery Information</Link></li>
+            <li><Link to="#">Privacy Policy</Link></li>
+            <li><Link to="#">Terms &amp; Conditions</Link></li>
+            <li><Link to="#">Contact Us</Link></li>
+            <li><Link to="#">Support Center</Link></li>
+            <li><Link to="#">Careers</Link></li>
           </ul>
         </div>
         <div className="footer-link-widget col wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
           <h4 className="widget-title">Account</h4>
           <ul className="footer-list mb-sm-5 mb-md-0">
-            <li><a href="#">Sign In</a></li>
-            <li><a href="#">View Cart</a></li>
-            <li><a href="#">My Wishlist</a></li>
-            <li><a href="#">Track My Order</a></li>
-            <li><a href="#">Help Ticket</a></li>
-            <li><a href="#">Shipping Details</a></li>
-            <li><a href="#">Compare products</a></li>
+            <li><Link to="#">Sign In</Link></li>
+            <li><Link to="#">View Cart</Link></li>
+            <li><Link to="#">My Wishlist</Link></li>
+            <li><Link to="#">Track My Order</Link></li>
+            <li><Link to="#">Help Ticket</Link></li>
+            <li><Link to="#">Shipping Details</Link></li>
+            <li><Link to="#">Compare products</Link></li>
           </ul>
         </div>
         <div className="footer-link-widget col wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
           <h4 className="widget-title">Corporate</h4>
           <ul className="footer-list mb-sm-5 mb-md-0">
-            <li><a href="#">Become a Vendor</a></li>
-            <li><a href="#">Affiliate Program</a></li>
-            <li><a href="#">Farm Business</a></li>
-            <li><a href="#">Farm Careers</a></li>
-            <li><a href="#">Our Suppliers</a></li>
-            <li><a href="#">Accessibility</a></li>
-            <li><a href="#">Promotions</a></li>
+            <li><Link to="#">Become a Vendor</Link></li>
+            <li><Link to="#">Affiliate Program</Link></li>
+            <li><Link to="#">Farm Business</Link></li>
+            <li><Link to="#">Farm Careers</Link></li>
+            <li><Link to="#">Our Suppliers</Link></li>
+            <li><Link to="#">Accessibility</Link></li>
+            <li><Link to="#">Promotions</Link></li>
           </ul>
         </div>
         <div className="footer-link-widget col wow animate__animated animate__fadeInUp" data-wow-delay=".4s">
           <h4 className="widget-title">Popular</h4>
           <ul className="footer-list mb-sm-5 mb-md-0">
-            <li><a href="#">Milk &amp; Flavoured Milk</a></li>
-            <li><a href="#">Butter and Margarine</a></li>
-            <li><a href="#">Eggs Substitutes</a></li>
-            <li><a href="#">Marmalades</a></li>
-            <li><a href="#">Sour Cream and Dips</a></li>
-            <li><a href="#">Tea &amp; Kombucha</a></li>
-            <li><a href="#">Cheese</a></li>
+            <li><Link to="#">Milk &amp; Flavoured Milk</Link></li>
+            <li><Link to="#">Butter and Margarine</Link></li>
+            <li><Link to="#">Eggs Substitutes</Link></li>
+            <li><Link to="#">Marmalades</Link></li>
+            <li><Link to="#">Sour Cream and Dips</Link></li>
+            <li><Link to="#">Tea &amp; Kombucha</Link></li>
+            <li><Link to="#">Cheese</Link></li>
           </ul>
         </div>
       </div>
@@ -182,11 +183,11 @@ const Footer = () => {
       <div className="col-xl-4 col-lg-6 col-md-6 text-end d-none d-md-block">
         <div className="mobile-social-icon">
           <h6>Follow Us</h6>
-          <a href="#"><img src={footerimg1} alt /></a>
-          <a href="#"><img src={footerimg2} alt /></a>
-          <a href="#"><img src={footerimg3} alt /></a>
-          <a href="#"><img src={footerimg4} alt /></a>
-          <a href="#"><img src={footerimg5} alt /></a>
+          <Link to="#"><img src={footerimg1} alt /></Link>
+          <Link to="#"><img src={footerimg2} alt /></Link>
+          <Link to="#"><img src={footerimg3} alt /></Link>
+          <Link to="#"><img src={footerimg4} alt /></Link>
+          <Link to="#"><img src={footerimg5} alt /></Link>
         </div>
         <p className="font-sm">Up to 15% discount on your first subscribe</p>
       </div>

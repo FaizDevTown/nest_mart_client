@@ -3,6 +3,12 @@ import { useState } from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom"
 import toast from "react-hot-toast";
+import {Link} from "react-router-dom"
+import facebook from "../../assets/imgs/theme/icons/logo-facebook.svg"
+import google from "../../assets/imgs/theme/icons/logo-google.svg"
+import apple from "../../assets/imgs/theme/icons/logo-apple.svg"
+import { useAuth } from "../../context/userAuth";
+
 const Register = () => {
 
   const [username,setUsername ] = useState("")
@@ -10,6 +16,7 @@ const Register = () => {
   const [password,setPassword] = useState("");
   const [confirmPassword,setConfirmPassword] = useState("");
   const navigate = useNavigate();
+  const {auth,setAuth} = useAuth()
 
 
 
@@ -54,7 +61,17 @@ const handleSubmit = async (e) => {
       password,
     confirmPassword
     });
+    console.log(res.data);
     if (res && res.data.success) {
+      localStorage.setItem("auth",JSON.stringify({
+        user:res.data.user,
+        token:res.data.token
+      }))
+      setAuth({
+        user:res.data.user,
+        token:res.data.token
+      })
+
       toast.success(res.data && res.data.message);
       navigate("/login");
     } else {
@@ -78,7 +95,7 @@ const handleSubmit = async (e) => {
               <div className="padding_eight_all bg-white">
                 <div className="heading_s1">
                   <h1 className="mb-5">Create an Account</h1>
-                  <p className="mb-30">Already have an account? <a href="page-login.html">Login</a></p>
+                  <p className="mb-30">Already have an account? <Link to="/login">Login</Link></p>
                 </div>
                 <form onSubmit={handleSubmit}>
                   <div className="form-group">
@@ -123,7 +140,7 @@ const handleSubmit = async (e) => {
                         <label className="form-check-label" htmlFor="exampleCheckbox12"><span>I agree to terms &amp; Policy.</span></label>
                       </div>
                     </div>
-                    <a href="page-privacy-policy.html"><i className="fi-rs-book-alt mr-5 text-muted" />Lean more</a>
+                    <Link to="page-privacy-policy.html"><i className="fi-rs-book-alt mr-5 text-muted" />Lean more</Link>
                   </div>
                   <div className="form-group mb-30">
                     <button type="submit" className="btn btn-fill-out btn-block hover-up font-weight-bold" name="login">Submit &amp; Register</button>
@@ -135,18 +152,18 @@ const handleSubmit = async (e) => {
           </div>
           <div className="col-lg-6 pr-30 d-none d-lg-block">
             <div className="card-login mt-115">
-              <a href="#" className="social-login facebook-login">
-                <img src="assets/imgs/theme/icons/logo-facebook.svg" alt />
+              <Link to="#" className="social-login facebook-login">
+                <img src={facebook} alt />
                 <span>Continue with Facebook</span>
-              </a>
-              <a href="#" className="social-login google-login">
-                <img src="assets/imgs/theme/icons/logo-google.svg" alt />
+              </Link>
+              <Link to="#" className="social-login google-login">
+                <img src={google} alt />
                 <span>Continue with Google</span>
-              </a>
-              <a href="#" className="social-login apple-login">
-                <img src="assets/imgs/theme/icons/logo-apple.svg" alt />
+              </Link>
+              <Link to="#" className="social-login apple-login">
+                <img src={apple} alt />
                 <span>Continue with Apple</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
