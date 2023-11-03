@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import img1 from "../../assets/imgs/shop/product-1-1.jpg";
 import img2 from "../../assets/imgs/shop/product-1-2.jpg";
 import img3 from "../../assets/imgs/shop/product-3-1.jpg";
@@ -6,7 +7,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const FeatureProducts = () => {
   return (
     <>
-      <section className="section-padding pb-5">
+    <Link to={`/detailPage/:slug`}>
+    <section className="section-padding pb-5">
         <div className="container">
           <div className="section-title wow animate__animated animate__fadeIn">
             <h3 className> Featured Products </h3>
@@ -488,6 +490,8 @@ const FeatureProducts = () => {
           </div>
         </div>
       </section>
+    </Link>
+   
     </>
   );
 };

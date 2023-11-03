@@ -20,38 +20,9 @@ const Register = () => {
 
 
 
-  
-  // const isEmailValid = (email) => {
-  //   // Check if the email matches the format: "gmail.com"
-  //   return /@gmail\.com$/.test(email);
-  // };
-
-  
-
-  // const isPasswordValid = (password) => {
-  //   // Check if the password is at least 8 characters and at most 12 characters
-  //   return password.length >= 8 && password.length <= 12;
-  // };
-
-// handle submit 
+ 
 const handleSubmit = async (e) => {
   e.preventDefault();
-// console.log("gghgh");
-  // if (!username || !email || !password || !confirmPassword) {
-  //   toast.error("Please fill in all fields.");
-  //   return;
-  // }
-
-  // if (!isEmailValid(email)) {
-  //   toast.error("Please use a valid Gmail email address.");
-  //   return;
-  // }
-
-  // if (!isPasswordValid(password)) {
-  //   toast.error("Password must be between 8 and 12 characters.");
-  //   return;
-  // }
-
 
   try {
     // console.log("jnjnjn");

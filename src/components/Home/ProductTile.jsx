@@ -7,7 +7,7 @@ const ProductTile = () => {
   return (
     <>
       
-
+<Link to={`/detailPage/:slug`}>
 <section className="product-tabs section-padding position-relative">
   <div className="container">
     <div className="section-title style-2 wow animate__animated animate__fadeIn">
@@ -143,6 +143,8 @@ const ProductTile = () => {
    
   </div>
 </section>
+</Link>
+
 
 
     </>

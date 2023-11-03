@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+
 const Deals = () => {
   return <>
-   <section className="section-padding mb-30">
+  <Link to={`/detailPage/:slug`}>
+  <section className="section-padding mb-30">
   <div className="container">
     <div className="row">
       <div className="col-xl-3 col-lg-4 col-md-6 mb-sm-5 mb-md-0 wow animate__animated animate__fadeInUp" data-wow-delay={0}>
@@ -265,7 +268,8 @@ const Deals = () => {
       </div>
     </div>
   </div>
-</section>
+</section></Link>
+
 
         
   </>;
